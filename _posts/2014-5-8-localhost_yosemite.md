@@ -1,3 +1,7 @@
+---
+layout: post
+title: Localhost Yosemite
+---
 ## Start Apache
 `sudo apachectl start`
 
@@ -56,3 +60,4 @@ ServerName local.xxx
 
 ## Restart Apache
 `sudo apachectl restart`
+

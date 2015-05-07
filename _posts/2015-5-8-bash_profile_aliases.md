@@ -1,3 +1,8 @@
+---
+layout: post
+title: .bash_profile aliases
+---
+
 ## /Users/[username]
 `touch .bash_profile`
 

@@ -1,3 +1,7 @@
+---
+layout: post
+title: Web Dev Setup
+---
 ## Show hidden files
 `defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder`
 
