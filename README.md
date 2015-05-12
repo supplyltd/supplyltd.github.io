@@ -1,6 +1,6 @@
 # Supply Interactive
 
-![Github Page](https://supplyltd.github.io)
+[Github Page](https://supplyltd.github.io)
 
 
 ## Get Started
