@@ -2,10 +2,6 @@
 published: true
 ---
 
----
-layout: post
-title: .gitignore
----
     # Compiled source #
 	###################
 	*.com
