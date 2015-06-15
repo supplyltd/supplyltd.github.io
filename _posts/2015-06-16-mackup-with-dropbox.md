@@ -1,6 +1,7 @@
 ---
-published: false
+published: true
 ---
+
 
 # Install
 `brew install mackup`
