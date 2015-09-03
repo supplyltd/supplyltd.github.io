@@ -1,6 +1,7 @@
 ---
-published: false
+published: true
 ---
+
 
 [Symfony](http://symfony.com/doc/current/book/installation.html#checking-symfony-application-configuration-and-setup)
 [Kunstmaan](https://bundles.kunstmaan.be/documentation/installation)
@@ -74,7 +75,3 @@ gulp build
 app/console assets:install --symlink
 
 app/console assetic:dump
-
-
-
-
