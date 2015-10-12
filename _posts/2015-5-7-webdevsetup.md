@@ -6,6 +6,7 @@ published: true
 
 
 
+
 ## Show hidden files
 `defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder`
 
@@ -36,7 +37,8 @@ export PATH=$homebrew:$PATH
 `brew install memcached`<br>
 `brew install php55-memcache`<br>
 `brew install imagemagick`<br>
-`brew install php55-imagick`
+`brew install php55-imagick`<br>
+`brew install optipng`
 
 **/etc/apache2/httpd.conf**
 <pre>
