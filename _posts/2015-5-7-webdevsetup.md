@@ -5,6 +5,7 @@ published: true
 ---
 
 
+
 ## Show hidden files
 `defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder`
 
@@ -89,7 +90,8 @@ chruby 2.2.3
 `gem outdated`<br>
 `gem cleanup`<br>
 `gem update`<br>
-`gem install compass`
+`gem install compass`<br>
+`gem install bundler`
 
 ## NODE
 `brew install node`
