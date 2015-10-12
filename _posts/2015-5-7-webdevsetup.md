@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Web Dev Setup
+published: true
 ---
+
 ## Show hidden files
 `defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder`
 
@@ -27,8 +29,9 @@ export PATH=$homebrew:$PATH
 `brew install php55 --with-apache`
 
 **Extensions**<br>
+`brew install fabric`<br>
 `brew install memcached`<br>
-`brew install php55-memcached`<br>
+`brew install php55-memcache`<br>
 `brew install imagemagic`<br>
 `brew install php55-imagick`
 
@@ -66,9 +69,10 @@ The Octocat has [a Gist containing some good rules](https://gist.githubuserconte
 **/usr/local/etc/php/5.5/php.ini**
 <pre>
 date.timezone = Pacific/Auckland
+memory_limit = 1280M
 </pre>
 
-## Ruby
+## Ruby - Remove
 `brew install rbenv`<br>
 `brew install ruby-build`<br>
 `rbenv install 2.2.2`
@@ -80,6 +84,19 @@ eval "$(rbenv init -)"
 </pre>
 
 `rbenv global 2.2.2`<br>
+
+## Ruby
+`brew install chruby`<br>
+`brew install ruby-install`<br>
+`ruby-install ruby 2.2.3`<br>
+
+**.bash_profile**
+<pre>
+# Ruby
+source /usr/local/share/chruby/chruby.sh
+chruby 2.2.3
+</pre>
+
 `gem outdated`<br>
 `gem cleanup`<br>
 `gem update`<br>
