@@ -7,6 +7,7 @@ published: true
 
 
 
+
 ## Show hidden files
 `defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder`
 
@@ -107,4 +108,5 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 
 `npm install -g bower`<br>
 `npm install -g gulp`<br>
-`npm install -g grunt`
+`npm install -g grunt-cli`<br>
+`npm install -g uglify-js
