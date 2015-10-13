@@ -8,6 +8,7 @@ published: true
 
 
 
+
 ## Show hidden files
 `defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder`
 
@@ -94,7 +95,6 @@ chruby 2.2.3
 `gem cleanup`<br>
 `gem update`<br>
 `gem install compass`<br>
-`gem install bundler`
 
 ## NODE
 `brew install node`
@@ -109,4 +109,4 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 `npm install -g bower`<br>
 `npm install -g gulp`<br>
 `npm install -g grunt-cli`<br>
-`npm install -g uglify-js
+`npm install -g uglify-js`
