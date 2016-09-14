@@ -1,65 +1,34 @@
 ---
 layout: post
-title: Web Dev Setup
+title: Local Dev Setup
 published: true
+date: '2016-09-15 10:17 +1200'
+author: Supply
 ---
-
-
-
-
-
+## Open Terminal
+`cd ~`
 
 ## Show hidden files
 `defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder`
 
-## SSH Key
+## SSH Key : 
 `ssh-keygen -t rsa -C "[useremail]"`
 
-## Homebrew
+## Install Homebrew
 `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`<br>
-`brew doctor`
 
-**.bash_profile**
-<pre>
-# Fix $PATH for homebrew
-homebrew=/usr/local/bin:/usr/local/sbin
-export PATH=$homebrew:$PATH
-</pre>
+## Copy and paste [.bash_profile](http://supplyltd.github.io/blog/bash-profile) in /Users/[username]
 
-## PHP
-`brew tap homebrew/dupes`<br>
-`brew tap homebrew/versions`<br>
-`brew tap homebrew/homebrew-php`<br>
-`brew options php55`<br>
-`brew install php55 --with-apache`
+## Install Packages
 
-**Extensions**<br>
-`brew install fabric`<br>
-`brew install composer`<br>
-`brew install memcached`<br>
-`brew install php55-memcache`<br>
-`brew install imagemagick`<br>
-`brew install php55-imagick`<br>
-`brew install optipng`
-
-**/etc/apache2/httpd.conf**
-<pre>
-LoadModule php5_module /usr/local/opt/php55/libexec/apache2/libphp5.so
-</pre>
-
-## mySQL
-`brew install mysql`<br>
-`brew info mysql`
-
-## Services
-`brew tap homebrew/services`<br>
-`brew services start mysql`<br>
-`brew services start memcached`
-
-## GIT
+### GIT
 `brew install git`
 
-**.gitconfig**
+**Copy and paste [.gitignore_global](http://supplyltd.github.io/blog/gitignore-global) in /Users/[username]**
+
+`touch .gitconfig`<br>
+`nano .gitconfig`
+
 <pre>
 [user]
 	name = [userrealname]
@@ -67,46 +36,76 @@ LoadModule php5_module /usr/local/opt/php55/libexec/apache2/libphp5.so
 [color]
 	ui = true
 [core]
-	excludesfile = /Users/[username]/.gitignore_global
+	excludesfile = ~/.gitignore_global
 </pre>
 
-**.gitignore_global**<br>
-The Octocat has [a Gist containing some good rules](https://gist.githubusercontent.com/octocat/9257657/raw/c91b435be351fcdff00f6f97f20824d0286b99ef/.gitignore) to add to this file.
+### PHP
+`brew tap homebrew/dupes`<br>
+`brew tap homebrew/versions`<br>
+`brew tap homebrew/homebrew-php`<br>
+`brew install php56`<br>
 
-**/usr/local/etc/php/5.5/php.ini**
+`nano /etc/apache2/httpd.conf`
+
+<pre>
+LoadModule php5_module /usr/local/opt/php56/libexec/apache2/libphp5.so
+</pre>
+
+`nano /usr/local/etc/php/5.6/php.ini`
+
 <pre>
 date.timezone = Pacific/Auckland
-memory_limit = 1024M
+memory_limit = 2048M
 </pre>
 
-## Ruby
+**packages**
+
+`brew install fabric`<br>
+`brew install composer`<br>
+`brew install memcached`<br>
+`brew install php56-memcache`<br>
+`brew install imagemagick`<br>
+`brew install php56-imagick`<br>
+`brew install optipng`
+
+### mySQL
+
+`brew install mysql`
+
+### Ruby
 `brew install chruby`<br>
 `brew install ruby-install`<br>
-`ruby-install ruby 2.2.3`<br>
+`ruby-install ruby x.x.x`<br>
 
-**.bash_profile**
+`nano .bash_profile`
+
 <pre>
 # Ruby
 source /usr/local/share/chruby/chruby.sh
-chruby 2.2.3
+chruby x.x.x
 </pre>
 
-`gem outdated`<br>
-`gem cleanup`<br>
-`gem update`<br>
-`gem install compass`<br>
+`source ~/.bash_profile`
 
-## NODE
+### NODE
 `brew install node`
 
-**.bash_profile**
+`nano .bash_profile`
+
 <pre>
 # NODE PATH
 export NODE_PATH="/usr/local/lib/node"
 export PATH="/usr/local/share/npm/bin:$PATH"
 </pre>
 
+`source ~/.bash_profile`
+
 `npm install -g bower`<br>
-`npm install -g gulp`<br>
+`npm install -g gulp-cli`<br>
 `npm install -g grunt-cli`<br>
 `npm install -g uglify-js`
+
+## Services
+`brew tap homebrew/services`<br>
+`brew services start mysql`<br>
+`brew services start memcached`
