@@ -27,7 +27,9 @@ Require all granted
 `Include /private/etc/apache2/extra/httpd-vhosts.conf` : Uncomment<br>
 `LoadModule vhost_alias_module libexec/apache2/mod_vhost_alias.so` : Uncomment<br>
 **SSL**
+`LoadModule socache_shmcb_module libexec/apache2/mod_socache_shmcb.so` : Uncomment<br>
 `LoadModule ssl_module libexec/apache2/mod_ssl.so` : Uncomment<br>
+`Include /private/etc/apache2/extra/httpd-ssl.conf` : Uncomment<br>
 
 ## cd /etc/apache2/extra/httpd-userdir.conf
 `Include /private/etc/apache2/users/*.conf` : Uncomment
