@@ -4,7 +4,7 @@ date: '2016-09-15 11:48 +1200'
 author: Supply
 published: true
 ---
-## Copy and paste to /Users/[username]/.gitignore_global
+## Copy and paste to /Users/[username]/.bash_profile
 
     # Fix $PATH for homebrew
     homebrew=/usr/local/bin:/usr/local/sbin
