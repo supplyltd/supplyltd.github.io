@@ -1,26 +1,31 @@
 ---
 published: true
+layout: post
+date: '2016-09-15 11:32 +1200'
+author: Supply
 ---
 
+[Mackup](https://github.com/lra/mackup)
 
-# Install
+## Install
 `brew install mackup`
 
-# ~/
-## Configure .mackup.cfg
+`cd ~`<br>
+`touch .mackup.cfg`<br>
+`nano .mackup.cfg`
 
 	[storage]
-    engine = file_system
-	path = [dropbox_directory]/_sync
-	directory = Mackup
+    engine = dropbox
+	path = [mackupsyncdirectory]
 
 	[applications_to_sync]
 	bash
 	git
 	mackup
-	sequel-pro
 	ssh
-	transmit
+    
+    [configuration_files]
+    .gitignore_global
 
 # Backup
 `mackup backup`
