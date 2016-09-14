@@ -2,7 +2,7 @@
 layout: post
 date: '2016-09-15 11:48 +1200'
 author: Supply
-published: false
+published: true
 ---
 ## Copy and paste to /Users/[username]/.gitignore_global
 
