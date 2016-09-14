@@ -1,19 +1,3 @@
-# Supply Interactive
+# supplyltd.github.io
+My blog made with [jekyll](http://jekyllrb.com) and hosted with Github Pages.
 
-[Github Page](https://supplyltd.github.io)
-
-
-## Get Started
-
-[Jekyll](http://jekyllrb.com)
-
-`gem install jekyll`
-
-`jekyll serve`
-
-`jekyll build`
-
-
-## Posts
-
-_posts

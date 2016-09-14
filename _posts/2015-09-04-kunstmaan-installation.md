@@ -1,4 +1,7 @@
 ---
+layout: post
+title:  "kunstmann"
+date:   2015-09-04 18:51:04 +1200
 published: true
 ---
 
@@ -63,7 +66,7 @@ sudo chmod +a "`whoami` allow delete,write,append,file_inherit,directory_inherit
       SetEnv APP_ENV "dev"
 	</VirtualHost>
 
-# Executing 
+# Executing
 bundle install
 
 npm install
