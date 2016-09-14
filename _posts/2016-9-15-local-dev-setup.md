@@ -109,3 +109,12 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 `brew tap homebrew/services`<br>
 `brew services start mysql`<br>
 `brew services start memcached`
+
+## SSL
+`cd /etc/apache2/`<br>
+`sudo openssl req -new -key server.key -out server.csr`
+`sudo openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt`
+`sudo openssl rsa -in server.key -out server.key`
+`sudo apachectl restart`
+
+
