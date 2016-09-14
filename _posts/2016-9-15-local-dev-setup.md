@@ -11,20 +11,20 @@ author: Supply
 ## Show hidden files
 `defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder`
 
-## SSH Key : 
+## SSH Key
 `ssh-keygen -t rsa -C "[useremail]"`
 
-## Install Homebrew
-`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`<br>
+## Homebrew
+`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-## Copy and paste [.bash_profile](http://supplyltd.github.io/blog/bash-profile) in /Users/[username]
+### Copy and paste [.bash_profile](http://supplyltd.github.io/blog/bash-profile) to /Users/[username]
 
 ## Install Packages
 
 ### GIT
 `brew install git`
 
-**Copy and paste [.gitignore_global](http://supplyltd.github.io/blog/gitignore-global) in /Users/[username]**
+**Copy and paste [.gitignore_global](http://supplyltd.github.io/blog/gitignore-global) to /Users/[username]**
 
 `touch .gitconfig`<br>
 `nano .gitconfig`
@@ -116,5 +116,38 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 `sudo openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt`
 `sudo openssl rsa -in server.key -out server.key`
 `sudo apachectl restart`
+
+## Virtual host
+`nano /etc/apache2/extra/httpd-vhosts.conf`
+
+Example:
+
+**http://**<br>
+<pre>
+&lt;VirtualHost *:80&gt;
+DocumentRoot "/Users/[username]/Sites/[projectwebroot]"
+ServerName local.[projecturl]
+&lt;/VirtualHost>
+</pre>
+
+**https://**<br>
+<pre>
+&lt;VirtualHost *:443&gt;
+DocumentRoot "/Users/[username]/Sites/[projectwebroot]"
+ServerName local.[projecturl]
+SSLEngine on
+SSLCertificateFile "private/etc/apache2/server.crt"
+SSLCertificateKeyFile "/private/etc/apache2/server.key"
+&lt;/VirtualHost&gt;
+</pre>
+
+`nano /etc/hosts`
+
+<pre>
+127.0.0.1 local.[projecturl]
+</pre>
+
+`sudo apachectl restart`
+
 
 
