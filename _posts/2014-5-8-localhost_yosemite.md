@@ -17,21 +17,19 @@ Require all granted
 &lt;/Directory&gt;
 </pre>
 
-### permisssion
--rw-r--r--  1 [username]  wheel  xxx  x xxx xx:xx [username].conf<br>
-`sudo chmod 644 [username].conf`<br>
--rw-r--r--  1 root  wheel  xxx  x xxx xx:xx [username].conf : Result
-
 ## cd /etc/apache2/httpd.conf
 
 `LoadModule authz_core_module libexec/apache2/mod_authz_core.so` : Uncomment(Uncommented on a clean install)<br>
 `LoadModule authz_host_module libexec/apache2/mod_authz_host.so` : Uncomment(Uncommented on a clean install)<br>
 `LoadModule userdir_module libexec/apache2/mod_userdir.so` : Uncomment<br>
 `Include /private/etc/apache2/extra/httpd-userdir.conf` : Uncomment<br>
-`LoadModule rewrite_module libexec/apache2/mod_rewrite.so` : Uncomment<br><br>
-
+`LoadModule rewrite_module libexec/apache2/mod_rewrite.so` : Uncomment<br>
 `Include /private/etc/apache2/extra/httpd-vhosts.conf` : Uncomment<br>
 `LoadModule vhost_alias_module libexec/apache2/mod_vhost_alias.so` : Uncomment<br>
+**SSL**
+`LoadModule ssl_module libexec/apache2/mod_ssl.so` : Uncomment<br>
 
 ## cd /etc/apache2/extra/httpd-userdir.conf
 `Include /private/etc/apache2/users/*.conf` : Uncomment
+
+
