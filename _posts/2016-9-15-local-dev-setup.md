@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Local Dev Setup
+title: _posts/2016-9-15-local-dev-setup.md
 published: true
 date: '2016-09-15 10:17 +1200'
 author: Supply
@@ -29,15 +29,14 @@ author: Supply
 `touch .gitconfig`<br>
 `nano .gitconfig`
 
-<pre>
-[user]
-	name = [userrealname]
-	email = [useremail]
-[color]
-	ui = true
-[core]
-	excludesfile = ~/.gitignore_global
-</pre>
+    [user]
+        name = [userrealname]
+        email = [useremail]
+    [color]
+        ui = true
+    [core]
+        excludesfile = ~/.gitignore_global
+
 
 ### PHP
 `brew tap homebrew/dupes`<br>
@@ -47,16 +46,12 @@ author: Supply
 
 `nano /etc/apache2/httpd.conf`
 
-<pre>
-LoadModule php5_module /usr/local/opt/php56/libexec/apache2/libphp5.so
-</pre>
+	LoadModule php5_module /usr/local/opt/php56/libexec/apache2/libphp5.so
 
 `nano /usr/local/etc/php/5.6/php.ini`
 
-<pre>
-date.timezone = Pacific/Auckland
-memory_limit = 2048M
-</pre>
+	date.timezone = Pacific/Auckland
+	memory_limit = 2048M
 
 **packages**
 
@@ -79,11 +74,9 @@ memory_limit = 2048M
 
 `nano .bash_profile`
 
-<pre>
-# Ruby
-source /usr/local/share/chruby/chruby.sh
-chruby x.x.x
-</pre>
+    # Ruby
+    source /usr/local/share/chruby/chruby.sh
+    chruby x.x.x
 
 `source ~/.bash_profile`
 
@@ -92,11 +85,9 @@ chruby x.x.x
 
 `nano .bash_profile`
 
-<pre>
-# NODE PATH
-export NODE_PATH="/usr/local/lib/node"
-export PATH="/usr/local/share/npm/bin:$PATH"
-</pre>
+    # NODE PATH
+    export NODE_PATH="/usr/local/lib/node"
+    export PATH="/usr/local/share/npm/bin:$PATH"
 
 `source ~/.bash_profile`
 
@@ -122,33 +113,26 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 
 Example:
 
-**http://**<br>
-<pre>
-&lt;VirtualHost *:80&gt;
-DocumentRoot "/Users/[username]/Sites/[projectwebroot]"
-ServerName local.[projecturl]
-&lt;/VirtualHost>
-</pre>
+**http://**
+
+    <VirtualHost *:80>
+    DocumentRoot "/Users/[username]/Sites/[projectwebroot]"
+    ServerName local.[projecturl]
+    </VirtualHost>
 
 
-**https://**<br>
-<pre>
-&lt;VirtualHost *:443&gt;
-DocumentRoot "/Users/[username]/Sites/[projectwebroot]"
-ServerName local.[projecturl]
-SSLEngine on
-SSLCertificateFile "private/etc/apache2/server.crt"
-SSLCertificateKeyFile "/private/etc/apache2/server.key"
-&lt;/VirtualHost&gt;
-</pre>
+**https://**
+
+    <VirtualHost *:443>
+    DocumentRoot "/Users/[username]/Sites/[projectwebroot]"
+    ServerName local.[projecturl]
+    SSLEngine on
+    SSLCertificateFile "private/etc/apache2/server.crt"
+    SSLCertificateKeyFile "/private/etc/apache2/server.key"
+    </VirtualHost>
 
 `nano /etc/hosts`
 
-<pre>
-127.0.0.1 local.[projecturl]
-</pre>
+	127.0.0.1 local.[projecturl]
 
 `sudo apachectl restart`
-
-
-
