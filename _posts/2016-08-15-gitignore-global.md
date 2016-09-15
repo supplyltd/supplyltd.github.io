@@ -4,7 +4,9 @@ date: '2016-08-15 11:29 +1200'
 author: Supply
 published: true
 ---
-	# Compiled source #
+## Copy and paste to /Users/[username]/.gitignore_global
+
+    # Compiled source #
     ###################
     *.com
     *.class
