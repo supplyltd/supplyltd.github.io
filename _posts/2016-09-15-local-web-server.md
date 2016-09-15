@@ -43,7 +43,7 @@ published: true
 `brew tap homebrew/homebrew-php`<br>
 `brew install php56`<br>
 
-`nano /etc/apache2/httpd.conf`
+`sudo nano /etc/apache2/httpd.conf`
 
 	LoadModule php5_module /usr/local/opt/php56/libexec/apache2/libphp5.so
 
