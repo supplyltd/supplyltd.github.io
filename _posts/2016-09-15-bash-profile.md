@@ -18,4 +18,4 @@ published: true
 
     ulimit -n 1024
 
-`source .bash_profile`
+`source ~/.bash_profile`
