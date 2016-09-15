@@ -108,7 +108,7 @@ published: true
 `sudo apachectl restart`
 
 ## Virtual host
-`nano /etc/apache2/extra/httpd-vhosts.conf`
+`sudo nano /etc/apache2/extra/httpd-vhosts.conf`
 
 Example:
 
@@ -130,7 +130,7 @@ Example:
     SSLCertificateKeyFile "/private/etc/apache2/server.key"
     </VirtualHost>
 
-`nano /etc/hosts`
+`sudo nano /etc/hosts`
 
 	127.0.0.1 local.[projecturl]
 
