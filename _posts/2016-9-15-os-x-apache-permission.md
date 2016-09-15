@@ -8,7 +8,8 @@ author: Supply
 ## /etc/apache2/users/
 `cd /etc/apache2/users/`<br>
 `whoami`<br>
-`sudo touch [username].conf`
+`sudo touch [username].conf`<br>
+`sudo nano [username].conf`
 
     <Directory "/Users/[username]/Sites/">
     AllowOverride All
@@ -18,7 +19,7 @@ author: Supply
 
 ## /etc/apache2/httpd.conf
 
-`cd /etc/apache2/httpd.conf` and remove leading `#` symbol
+`sudo nano /etc/apache2/httpd.conf` and remove leading `#` symbol
 
 `LoadModule authz_core_module libexec/apache2/mod_authz_core.so` : Removed on a clean install<br>
 `LoadModule authz_host_module libexec/apache2/mod_authz_host.so` : Removed on a clean install<br>
@@ -37,6 +38,6 @@ author: Supply
 
 ## /etc/apache2/extra/httpd-userdir.conf
 
-`cd /etc/apache2/extra/httpd-userdir.conf` and remove leading `#` symbol
+`sudo nano /etc/apache2/extra/httpd-userdir.conf` and remove leading `#` symbol
 
 `Include /private/etc/apache2/users/*.conf`
