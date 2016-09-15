@@ -4,6 +4,8 @@ date: '2016-09-15 11:42 +1200'
 author: Supply
 published: true
 ---
+## Set an Apache permission first from [this link](http://supplyltd.github.io/blog/os-x-apache-permission)
+
 ## Open Terminal
 `cd ~`
 
