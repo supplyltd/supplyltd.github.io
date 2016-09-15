@@ -5,7 +5,8 @@ published: true
 date: '2016-09-15 09:12 +1200'
 author: Supply
 ---
-## cd /etc/apache2/users/
+## /etc/apache2/users/
+`cd /etc/apache2/users/`<br>
 `whoami`<br>
 `sudo touch [username].conf`
 
@@ -15,9 +16,9 @@ author: Supply
     Require all granted
     </Directory>
 
-## cd /etc/apache2/httpd.conf
+## /etc/apache2/httpd.conf
 
-Remove leading `#` symbol
+`cd /etc/apache2/httpd.conf` and remove leading `#` symbol
 
 `LoadModule authz_core_module libexec/apache2/mod_authz_core.so` : Removed on a clean install<br>
 `LoadModule authz_host_module libexec/apache2/mod_authz_host.so` : Removed on a clean install<br>
@@ -34,8 +35,8 @@ Remove leading `#` symbol
 `Include /private/etc/apache2/extra/httpd-ssl.conf`
 
 
-## cd /etc/apache2/extra/httpd-userdir.conf
+## /etc/apache2/extra/httpd-userdir.conf
 
-Remove leading `#` symbol
+`cd /etc/apache2/extra/httpd-userdir.conf` and remove leading `#` symbol
 
 `Include /private/etc/apache2/users/*.conf`
