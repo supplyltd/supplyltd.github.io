@@ -16,28 +16,26 @@ author: Supply
     </Directory>
 
 ## cd /etc/apache2/httpd.conf
-`LoadModule authz_core_module libexec/apache2/mod_authz_core.so` : Uncomment(Uncommented on a clean install)
 
-`LoadModule authz_host_module libexec/apache2/mod_authz_host.so` : Uncomment(Uncommented on a clean install)
+Remove leading `#` symbol
 
-`LoadModule userdir_module libexec/apache2/mod_userdir.so` : Uncomment
-
-`Include /private/etc/apache2/extra/httpd-userdir.conf` : Uncomment
-
-`LoadModule rewrite_module libexec/apache2/mod_rewrite.so` : Uncomment
-
-`Include /private/etc/apache2/extra/httpd-vhosts.conf` : Uncomment
-
-`LoadModule vhost_alias_module libexec/apache2/mod_vhost_alias.so` : Uncomment
+`LoadModule authz_core_module libexec/apache2/mod_authz_core.so` : Removed on a clean install<br>
+`LoadModule authz_host_module libexec/apache2/mod_authz_host.so` : Removed on a clean install<br>
+`LoadModule userdir_module libexec/apache2/mod_userdir.so`<br>
+`Include /private/etc/apache2/extra/httpd-userdir.conf`<br>
+`LoadModule rewrite_module libexec/apache2/mod_rewrite.so`<br>
+`Include /private/etc/apache2/extra/httpd-vhosts.conf`<br> 
+`LoadModule vhost_alias_module libexec/apache2/mod_vhost_alias.so`
 
 **SSL**
 
-`LoadModule socache_shmcb_module libexec/apache2/mod_socache_shmcb.so` : Uncomment
-
-`LoadModule ssl_module libexec/apache2/mod_ssl.so` : Uncomment
-
-`Include /private/etc/apache2/extra/httpd-ssl.conf` : Uncomment
+`LoadModule socache_shmcb_module libexec/apache2/mod_socache_shmcb.so`<br>
+`LoadModule ssl_module libexec/apache2/mod_ssl.so`<br>
+`Include /private/etc/apache2/extra/httpd-ssl.conf`
 
 
 ## cd /etc/apache2/extra/httpd-userdir.conf
-`Include /private/etc/apache2/users/*.conf` : Uncomment
+
+Remove leading `#` symbol
+
+`Include /private/etc/apache2/users/*.conf`
