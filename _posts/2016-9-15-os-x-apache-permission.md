@@ -6,17 +6,14 @@ date: '2016-09-15 09:12 +1200'
 author: Supply
 ---
 ## cd /etc/apache2/users/
-`whoami`
-
+`whoami`<br>
 `sudo touch [username].conf`
 
-<pre>
-&lt;Directory "/Users/[username]/Sites/"&gt;
-AllowOverride All
-Options Indexes MultiViews FollowSymLinks
-Require all granted
-&lt;/Directory&gt;
-</pre>
+    <Directory "/Users/[username]/Sites/">
+    AllowOverride All
+    Options Indexes MultiViews FollowSymLinks
+    Require all granted
+    </Directory>
 
 ## cd /etc/apache2/httpd.conf
 `LoadModule authz_core_module libexec/apache2/mod_authz_core.so` : Uncomment(Uncommented on a clean install)
@@ -44,5 +41,3 @@ Require all granted
 
 ## cd /etc/apache2/extra/httpd-userdir.conf
 `Include /private/etc/apache2/users/*.conf` : Uncomment
-
-
