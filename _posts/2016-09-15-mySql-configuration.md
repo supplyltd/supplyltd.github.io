@@ -2,7 +2,7 @@
 layout: post
 date: '2016-09-15 15:09 +1200'
 author: Supply
-published: false
+published: true
 ---
 ## Sequel Pro
 download from [here](https://www.sequelpro.com/) and install
