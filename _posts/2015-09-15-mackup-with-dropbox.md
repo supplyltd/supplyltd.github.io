@@ -16,7 +16,7 @@ author: Supply
 
 	[storage]
     engine = dropbox
-	path = [mackupsyncdirectory]
+	path = [your mackup directory in dropbox]
 
 	[applications_to_sync]
 	bash
